@@ -10,10 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($bdd, $query);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        if (password_verify($mdp, $row["mdp"])) {
+     if ($mdp == $row["mdp"]) {
+
             $_SESSION["id_membre"] = $row["id_membre"];
             $_SESSION["nom"] = $row["nom"];
-            header("Location: liste_objets.php");
+            header("Location: liste_objet.php");
             exit();
         } else {
             $error = "Mot de passe incorrect.";
@@ -30,9 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Connexion</title>
-    <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Ton fichier CSS personnalisé -->
+  
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>

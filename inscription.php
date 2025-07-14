@@ -1,4 +1,9 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+session_start();
+include("config.php");
+
 include("config.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -7,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genre = $_POST["genre"];
     $email = $_POST["email"];
     $ville = $_POST["ville"];
-    $mdp = password_hash($_POST["mdp"], PASSWORD_DEFAULT); // sécuriser le mot de passe
+    $mdp = password_hash($_POST["mdp"], PASSWORD_DEFAULT);
     $image = $_FILES['image_profil']['name'];
     $image_tmp = $_FILES['image_profil']['tmp_name'];
 
@@ -30,9 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inscription</title>
-    <!-- Bootstrap CSS -->
+ 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Style personnalisé -->
+   
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>

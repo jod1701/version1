@@ -55,9 +55,9 @@ INSERT INTO categorie_objet (nom_categorie) VALUES
 
 INSERT INTO objet (nom_objet, id_categorie, id_membre) VALUES
 
-('Sèche-cheveux', 1, 1), ('Trousse maquillage', 1, 1), ('Pinceau', 1, 1), ('Marteau', 2, 1),
-('Clé plate', 3, 1), ('Spatule', 4, 1), ('Mixeur', 4, 1), ('Tournevis', 2, 1),
-('Lime à ongles', 1, 1), ('Balance cuisine', 4, 1),
+('Sèche-cheveux', 1, 5), ('Trousse maquillage', 1, 5), ('Pinceau', 1, 5), ('Marteau', 2, 5),
+('Clé plate', 3, 5), ('Spatule', 4, 5), ('Mixeur', 4, 5), ('Tournevis', 2, 5),
+('Lime à ongles', 1, 5), ('Balance cuisine', 4, 5),
 
 ('Scie', 2, 2), ('Perceuse', 2, 2), ('Four', 4, 2), ('Friteuse', 4, 2),
 ('Casserole', 4, 2), ('Pelle', 2, 2), ('Ponceuse', 2, 2), ('Polisseuse', 1, 2),
@@ -76,7 +76,7 @@ INSERT INTO emprunt (id_objet, id_membre, date_emprunt, date_retour) VALUES
 (5, 3, '2025-07-02', '2025-07-08'),
 (12, 1, '2025-07-03', '2025-07-09'),
 (15, 4, '2025-07-04', '2025-07-10'),
-(20, 1, '2025-07-05', '2025-07-11'),
+(20, 5, '2025-07-05', '2025-07-11'),
 (22, 2, '2025-07-06', '2025-07-12'),
 (30, 4, '2025-07-07', '2025-07-13'),
 (33, 1, '2025-07-08', '2025-07-14'),
